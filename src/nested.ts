@@ -1,8 +1,7 @@
-import { factory } from "typescript";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
-import { constants } from "buffer";
+
 
 /**
  * Consumes an array of questions and returns a new array with only the questions

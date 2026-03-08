@@ -10,16 +10,16 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType,
 ): Question {
-    return {
-        id,
-        name,
-        type,
-        body: "",
-        expected: "",
-        options: [],
-        points: 1,
-        published: false,
-    };
+return {
+    id,
+    name,
+    type,
+    body: "",
+    expected: "",
+    options: [],
+    points: 1,
+    published: false,
+};
 }
 
 /**
@@ -30,9 +30,9 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
-    return (
-        question.expected.trim().toLowerCase() === answer.trim().toLowerCase()
-    );
+     return (
+         question.expected.trim().toLowerCase() === answer.trim().toLowerCase()
+     );
 }
 
 /**
@@ -90,7 +90,7 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
-    return { ...question, name: newName };
+   return { ...question, name: newName };
 }
 
 /**
@@ -99,7 +99,7 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
-    return { ...question, published: !question.published };
+   return { ...question, published: !question.published };
 }
 
 /**
@@ -116,7 +116,6 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         published: false,
     };
 }
-
 /**
  * Return a new version of the given question, with the `newOption` added to
  * the list of existing `options`. Remember that the new Question MUST have
@@ -125,7 +124,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
-    return { ...question, options: [...question.options, newOption] };
+     return { ...question, options: [...question.options, newOption] };
 }
 
 /**
@@ -142,14 +141,14 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number },
 ): Question {
-    return {
-        id,
-        name,
-        body: contentQuestion.body,
-        type: contentQuestion.type,
-        options: [...contentQuestion.options],
-        expected: contentQuestion.expected,
-        points,
-        published: false,
-    };
+return {
+    id,
+    name,
+    body: contentQuestion.body,
+    type: contentQuestion.type,
+    options: [...contentQuestion.options],
+    expected: contentQuestion.expected,
+    points,
+    published: false,
+};
 }
