@@ -73,6 +73,11 @@
             "published": false
         }
     ],
+<<<<<<< HEAD
+    "SIMPLE_QUESTIONS_2": [],
+    "EMPTY_QUESTIONS": [],
+    "TRIVIA_QUESTIONS": []
+=======
     "TRIVIA_QUESTIONS": [
         {
             "id": 1,
@@ -217,4 +222,5 @@
             "published": true
         }
     ]
+>>>>>>> upstream/task-nested
 }
