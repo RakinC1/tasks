@@ -15,8 +15,9 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return questions.filter((ques)=> ques.body !== "" || ques.expected!== "" || ques.options.length !== 0);
+    return [];
 }
+
 /***
  * Consumes an array of questions and returns the question with the given `id`. If the
  * question is not found, return `null` instead.
@@ -25,8 +26,7 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    const result = questions.find((ques)=>ques.id === id);
-    return result ?? null;
+    return null;
 }
 
 /**
@@ -42,7 +42,7 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
-    return questions.map((ques)=> ques.name);
+    return [];
 }
 
 /***
@@ -94,7 +94,7 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
-    return questions.map(q => ({ ...q, published : true }));
+    return [];
 }
 
 /***
@@ -102,9 +102,7 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
-    if (questions.length === 0 )return true;
-    const firstType = questions[0].type;
-    return questions.every(q=> q.type === firstType);
+    return false;
 }
 
 /***
@@ -164,7 +162,7 @@ export function editOption(
     targetId: number,
     targetOptionIndex: number,
     newOption: string
-): Question[] {
+) {
     return [];
 }
 
